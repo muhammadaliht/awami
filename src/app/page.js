@@ -11,7 +11,7 @@ export default function Home() {
   <div className="py-8">
   <ScrollVelocity
   texts={[" - Web Development - App Development - Design Studio - Quality Assurance",'Empower Yourself Through Technology With Us']} 
-  velocity={70} 
+  velocity={40} 
   className="custom-scroll-text text-9xl text-transparent py-4"
 />
 </div>
