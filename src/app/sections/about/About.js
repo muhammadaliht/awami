@@ -40,7 +40,7 @@ export default function About() {
               <div className="p-6 rounded-xl backdrop-blur-sm bg-cyan-950/30 h-full">
                 <FaRocket className="text-4xl text-cyan-400 mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
-                <p className="text-white/80">To provide innovative IT solutions that empower businesses and enhance citizen services.</p>
+                <p className="text-white/80">We have experienced that the users of IT Systems want to be empowered, instead of being just IT followers. Therefore, we are determined to “Empowering through Technology.</p>
               </div>
             </SpotlightCard>
 
@@ -51,7 +51,7 @@ export default function About() {
               <div className="p-6 rounded-xl backdrop-blur-sm bg-cyan-950/30 h-full">
                 <FaLightbulb className="text-4xl text-cyan-400 mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
-                <p className="text-white/80">To become a leading force in digital transformation and e-governance solutions.</p>
+                <p className="text-white/80">Our vision is to be a leader in our industry by providing innovative solutions and exceptional customer experiences that exceed expectations.</p>
               </div>
             </SpotlightCard>
 
@@ -62,7 +62,7 @@ export default function About() {
               <div className="p-6 rounded-xl backdrop-blur-sm bg-cyan-950/30 h-full">
                 <FaHandshake className="text-4xl text-cyan-400 mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-4">Our Values</h3>
-                <p className="text-white/80">Innovation, integrity, and commitment to excellence in every project we undertake.</p>
+                <p className="text-white/80">We believe that leadership is the key to success. Under the able leadership; teams nurture, bring innovation and deliver quality products with professional excellence through best coordination with customers.</p>
               </div>
             </SpotlightCard>
           </div>
