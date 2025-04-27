@@ -1,11 +1,5 @@
-import { 
-  Navbar, 
-  NavBody, 
-  NavItems, 
-  NavbarLogo,
-  NavbarButton 
-} from "./components/Navbar";
 import "./globals.css";
+import { Navigation } from "./components/Navigation";
 
 export const metadata = {
   title: "Create Next App",
@@ -16,25 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        {/* navbar */}
-        <Navbar>
-          <NavBody>
-            <NavbarLogo />
-            <NavItems 
-              items={[
-                { name: "Home", link: "/" },
-                { name: "About", link: "/about" },
-                { name: "Services", link: "/services" },
-                { name: "Contact", link: "/contact" },
-              ]} 
-            />
-            <NavbarButton href="/get-started">
-              Get Started
-            </NavbarButton>
-          </NavBody>
-        </Navbar>
-      
-       
+        <Navigation />
         {children}
       </body>
     </html>
