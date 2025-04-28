@@ -8,9 +8,9 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "deploy": "gh-pages -d out --dotfiles true",
+    "deploy": "gh-pages -d out",
     "lint": "next lint",
-    "predeploy": "npm run build && type nul > out/.nojekyll"
+    "predeploy": "npm run build && node scripts/create-nojekyll.js"
   },
   "dependencies": {
     "@tabler/icons-react": "^3.31.0",
