@@ -10,7 +10,7 @@
     "export": "next export",
     "deploy": "gh-pages -d out --dotfiles true",
     "lint": "next lint",
-    "predeploy": "npm run build && touch out/.nojekyll"
+    "predeploy": "npm run build && type nul > out/.nojekyll"
   },
   "dependencies": {
     "@tabler/icons-react": "^3.31.0",
