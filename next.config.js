@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export', // 👈 Required for static export
   images: { unoptimized: true },
   eslint: { ignoreDuringBuilds: true },
   webpack: (config) => {
@@ -7,8 +8,8 @@ const nextConfig = {
     return config;
   },
   compiler: {
-    styledComponents: true
-  }
+    styledComponents: true,
+  },
 };
 
 module.exports = nextConfig;
