@@ -11,7 +11,6 @@ import Policies from "./sections/Policies";
 import Outsourcing from "./sections/Outsourcing";
 import Footer from "./sections/Footer";
 
-export const runtime = "edge";
 
 export default function Home() {
   return (
