@@ -1,19 +1,57 @@
+'use client'
 import "./globals.css";
 import { Navigation } from "./components/Navigation";
-
-export const metadata = {
-  title: "Awami Systems Technologies (AST)",
-  description: "Awami Systems Technologies (AST) provides end-to-end solutions related to Information Technology to our customers, which makes us One-Stop solution provider",
-};
+import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Loader from "./components/Loader";
+import StyledComponentsRegistry from './registry'
 
 export default function RootLayout({ children }) {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      once: false,
+    });
+
+    // Set timer for loader
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <html lang="en">
-     <link rel="icon" href="/images/logo.png"></link>
-
+      <head>
+        <link rel="icon" href="/images/logo.png"></link>
+        <title>Awami Systems Technologies (AST)</title>
+      </head>
       <body>
-        <Navigation />
-        {children}
+        <StyledComponentsRegistry>
+          {loading ? (
+            <div style={{
+              height: '100vh',
+              width: '100vw',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              background:'#000428',
+              cursor:'pointer'
+            }}>
+              <Loader />
+            </div>
+          ) : (
+            <>
+              <Navigation />
+              {children}
+            </>
+          )}
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
