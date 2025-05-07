@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const projectData = [
@@ -152,6 +152,18 @@ const projectData = [
 export default function Projects() {
   const [activeTab, setActiveTab] = useState('featured'); // Changed default from 'all' to 'featured'
   const [hoveredId, setHoveredId] = useState(null);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024);
+    };
+    
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
   const tabs = [
     { id: 'featured', label: 'Featured' }, // Reordered to put Featured first
@@ -168,7 +180,7 @@ export default function Projects() {
   };
 
   return (
-    <div className="container mx-auto px-7 py-4">
+    <div className="container mx-auto px-7 pb-6">
       <motion.div 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -235,11 +247,13 @@ export default function Projects() {
               />
               
               <motion.div 
-                className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-4 flex flex-col justify-end"
-                initial={{ opacity: 0, y: 20 }}
+                className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-4 flex flex-col justify-end
+                  lg:opacity-0 lg:transform lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0
+                  opacity-100 translate-y-0"
+                initial={false} // Remove initial animation
                 animate={{ 
-                  opacity: hoveredId === project.id ? 1 : 0,
-                  y: hoveredId === project.id ? 0 : 20 
+                  opacity: isLargeScreen ? (hoveredId === project.id ? 1 : 0) : 1,
+                  y: isLargeScreen ? (hoveredId === project.id ? 0 : 20) : 0
                 }}
                 transition={{ duration: 0.3 }}
               >

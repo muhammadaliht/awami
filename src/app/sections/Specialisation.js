@@ -2,7 +2,7 @@ import React from 'react'
 import FlowingMenu from '../components/Flowing-Menu/FlowingMenu'
 
 const demoItems = [
-    { link: '#', text: 'Animal Disease Reporting ', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfAi_prpIsYke1xSbnWGZndqBK4L1to3cAVA&s' },
+    { link: '#', text: 'Animal Disease Reporting', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfAi_prpIsYke1xSbnWGZndqBK4L1to3cAVA&s' },
     { link: '#', text: 'Livestock', image: 'https://cdn.pixabay.com/video/2024/05/21/212968_tiny.jpg' },
     { link: '#', text: 'Agriculture', image: 'https://st5.depositphotos.com/90406440/75647/i/450/depositphotos_756471166-stock-photo-female-farmer-inspecting-her-smart.jpg' },
     { link: '#', text: 'Housing Solutions', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC4_zw__zgOasblK3oGM3huGYx8NLyDmiDDA&s' },

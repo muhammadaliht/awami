@@ -7,10 +7,10 @@ import { FaRocket, FaLightbulb, FaHandshake } from 'react-icons/fa';
 export default function About() {
   return (
     <>
-      <div className='min-h-screen w-screen py-16 px-7 '>
+      <div className='min-h-screen w-screen py-12 px-7 '>
         <div className='flex flex-col gap-8 max-w-7xl mx-auto'>
           
-          <h2 data-aos="fade-up" className={`bebas-neue sm:text-5xl text-4xl font-bold text-white bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text`}>
+          <h2 data-aos="fade-up" className={`bebas-neue sm:text-6xl text-5xl font-bold text-white bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text`}>
             + ABOUT
           </h2>
           
